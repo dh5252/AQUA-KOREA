@@ -1,0 +1,43 @@
+header{
+  height : 600px;
+  background-image :url('../UnderImage/UnderImage.jpg');
+  background-size: cover;
+}
+/*단체예약 표의 스타일을 설정한다*/
+.group {
+    width: 90%; /*넓이 90%로 설정*/
+    height: 300px; /*높이는 300px*/
+    margin: auto; /*여백 자동*/
+    border-collapse: separate; /*테이블 테두리 선*/
+    border-spacing: 1px; /*테이블 테두리 선*/
+    text-align: left; /*글자 왼쪽정렬*/
+    line-height: 1.5; /*줄 높이*/
+    border-top: 1px solid #ccc; /*칸의 위쪽 선 스타일*/
+}
+
+    /*단체예약 표 th태그의 스타일을 설정한다*/
+    .group th {
+        width: 100px;/*넓이 100px*/
+        padding: 10px;/*안쪽 여백 10px*/
+        font-weight: bold;/*글자 굵기 bold*/
+        vertical-align: top;/*글자 위쪽에 뜨게 */
+        border-bottom: 1px solid #ccc;/*칸의 아래쪽 선 스타일*/
+        background: #D2E1FF;/*배경색*/
+    }
+
+    /*단체예약 표 td태그의 스타일을 설정한다*/
+    .group td {
+        width: 500px;/*넓이 500px*/
+        padding: 10px;/*안쪽 여백 10px*/
+        vertical-align: top;/*위쪽으로 뜨게 설정*/
+        border-bottom: 1px solid #ccc;/*칸 아래쪽 선 스타일*/
+    }
+
+/*예약버튼의 스타일을 설정한다*/
+#reservate {
+    color: white;/*글자 흰색*/
+    background-color: skyblue;/*배경 하늘*/
+    font-size: 1.5em;/*글자 크기*/
+    border-radius: 0.8em;/*버튼 테두리 둥글게*/
+    padding: 5px 20px;/*여백*/
+}

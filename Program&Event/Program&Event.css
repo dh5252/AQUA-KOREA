@@ -1,0 +1,82 @@
+header{
+	height : 600px;
+	background-image :url('../UnderImage/UnderImage.jpg');
+	background-size: cover;
+}
+/* 헤더에는 드롭다운 용 사진 삽입됨. */
+.container{
+	width: 800px;
+	margin: 0 auto;
+  text-align: center;
+}
+/* 컨테이너는 진행중/종료 탭이 담긴다. 가운데 정렬을 해준다. */
+
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+/* 진행중, 종료 텍스트의 리스트 스타일을 설정한다. */
+ul.tabs li{
+  width : 150px;
+	background: white;
+	color: #222;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+/* 진행중, 종료 텍스트의 리스트 스타일을 설정한다. */
+
+ul.tabs li.current{
+	background: #CEECF5;
+	color: #222;
+  font-weight: bold
+}
+/* 현재 선택되고 있는 탭을 선택되고 있지 않는 탭과 구분하기 위해 디자인 */
+
+.tab-content{
+	display: none;
+	background: #CEECF5;
+	padding: 15px;
+}
+/* current 상태가 아니라면 보이지 않음 */
+
+.tab-content.current{
+	display: inherit;
+}
+/* current 상태라면 display를 inherit으로 설정해 보이게 함 */
+
+
+.tab-content.current > table{
+	width : 773px;
+
+}
+/* 테이블 크기설정 */
+
+.tab-content.current >  table tr td {
+	border-bottom : 1px solid black;
+}
+/* 컨텐츠를 구분하기 위한 td,tr아래 선추가 */
+
+.tab-content.current img{
+	cursor : pointer;
+}
+/* 링크가 걸려있는 걸 알 수 있게 img에 포인터 설정 */
+
+.Program-pagination{
+	list-style: none;
+	display: inline-block;
+}
+/* 페이지네이션 구현 */
+
+.Program-pagination > li{
+	display: block;
+	margin : 5px;
+	float : left;
+}
+/* 페이지네이션 구현 */
+
+.Program-pagination > li > a{
+	text-decoration: none;
+}
+/* 페이지네이션 구현 */

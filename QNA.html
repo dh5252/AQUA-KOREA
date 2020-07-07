@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>QnA</title>
+    <link rel="stylesheet" type="text/css" href="전체적용스타일.css">
+    <link rel="stylesheet" type="text/css" href="QNA/QNA.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript" src="전체적용.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript" src="QNA/QNA.js" ></script>
+
+    <header>
+    <div class="TopBar">
+      <div class="Logo">
+        <h1><a href="Mainpage.html">AQUA-KOREA</a></h1>
+      </div>
+      <div class="betweenHidden">
+      </div>
+      <nav class="MainMenu">
+        <ul>
+          <li><a href="AKIntro.html">AQUA-KOREA</a>
+            <ul class ="SubMenu">
+              <li><a href="AKIntro.html">AQUA-KOREA 소개</a></li>
+              <li><a href="ExhibitionHall.html">전시관 안내</a></li>
+              <li><a href="Time.html">운영시간</a></li>
+              <li><a href="HowToCome.html">오시는 길</a></li>
+            </ul>
+          </li>
+          <li><a href="Program.html">프로그램/이벤트</a>
+            <ul class = "SubMenu">
+              <li><a href="Program.html">프로그램</a></li>
+              <li><a href="Event.html">이벤트</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="E-Ticket.html">온라인 예매</a>
+            <ul class = "SubMenu">
+              <li><a href="E-Ticket.html">온라인 예매</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="Group.html">단체</a>
+            <ul class = "SubMenu">
+              <li><a href="Group.html">단체 예약</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="QNA.html">고객의 소리</a>
+            <ul class = "SubMenu">
+              <li><a href="QNA.html">QnA</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <div class="Frame">
+
+      <aside class="Left_side"></aside>
+      <main class="Content">
+          <h1>Q n A</h1><!--페이지 제목-->
+          <hr style="border: solid 1px black;">
+          <table>
+              <!--QnA 질문 테이블-->
+              <!--각 질문 클릭시 답변에 관한 팝업창이 뜨도록 설정-->
+              <!--tr과 td를 이용해 질문별로 깔끔하게 구현-->
+
+              <tr>
+                  <!--중복할인 관련 질문-->
+                  <td>
+                      <button type="button" onclick="중복할인()" style="color:black; background-color:white;  font-size:1.0em; border:0;  ">
+                          <!--질문 클릭시 중복할인 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 쿠폰 할인, 제휴카드 할인 등 중복할인이 가능한가요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--티켓 받는 장소 질문-->
+                  <td>
+                      <button type="button" onclick="티켓받기()" style="color:black; background-color:white;  font-size:1.0em; border:0; ">
+                          <!--질문 클릭시 티켓받기 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 예매후 티켓은 어디서 받는건가요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--유모차 질문-->
+                  <td>
+                      <button type="button" onclick="유모차()" style="color:black; background-color:white;  font-size:1.0em; border:0;  ">
+                          <!--질문 클릭시 유모차 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 유모차 반입이 가능한가요? 대여도 해주나요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--휠체어 질문-->
+                  <td>
+                      <button type="button" onclick="휠체어()" style="color:black; background-color:white;  font-size:1.0em; border:0;  ">
+                          <!--질문 클릭시 휠체어 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 휠체어 반입이 가능한가요? 대여도 해주나요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--킥보드 및 전동휠 질문-->
+                  <td>
+                      <button type="button" onclick="킥보드()" style="color:black; background-color:white;  font-size:1.0em; border:0;  ">
+                          <!--질문 클릭시 킥보드 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 킥보드 및 전동휠 반입이 가능한가요?
+                      </button>
+                      <hr>
+                  </td>
+
+              </tr>
+
+              <tr>
+                  <!--사진 및 캠코더 관련 질문-->
+                  <td>
+                      <button type="button" onclick="촬영()" style="color:black; background-color:white;  font-size:1.0em; border:0; ">
+                          <!--질문 클릭시 촬영 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 사진, 캠코더 촬영이 가능한가요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--애완동물 관련 질문-->
+                  <td>
+                      <button type="button" onclick="애완동물()" style="color:black; background-color:white;  font-size:1.0em; border:0;  ">
+                          <!--질문 클릭시 애완동물 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 애완동물과 함께 입장이 가능한가요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--영업시간 질문-->
+                  <td>
+                      <button type="button" onclick="영업시간()" style="color:black; background-color:white;  font-size:1.0em; border:0; ">
+                          <!--질문 클릭시 영업시간 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 영업시간이 어떻게 되나요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--기념품샵질문-->
+                  <td>
+                      <button type="button" onclick="기념품샵()" style="color:black; background-color:white;  font-size:1.0em; border:0; ">
+                          <!--질문 클릭시 기념품샵 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 아쿠아리움에 입장하지 않고 기념품샵만 이용할 수 있나요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+
+              <tr>
+                  <!--주차시설 질문-->
+                  <td>
+                      <button type="button" onclick="주차장()" style="color:black; background-color:white;  font-size:1.0em; border:0; ">
+                          <!--질문 클릭시 주차장 함수 실행 / 글씨 검정, 배경 흰색, 글씨크기 1.0em 테두리 0-->
+                          Q 주차시설이 있나요?
+                      </button>
+                      <hr>
+                  </td>
+              </tr>
+          </table>
+          <br><br>
+          <div class="pagination">
+              <!--질문순서페이지 조정-->
+              <a href="#">&laquo;</a><!--이전페이지-->
+              <a href="#" class="active">1</a><!--현재 페이지-->
+              <a href="#">&raquo;</a><!--다음페이지-->
+          </div>
+
+      </main>
+
+      <aside class="Right_side"></aside>
+
+    </div>
+
+    <hr style="border: solid 1px gray;">
+    <footer>
+        <div class="foo_div1">
+            <span>(주)AQUA-KOREA</span> <span>  |  </span>
+            <span>공동대표 : 안치원,장유성,정진희</span> <span>  |  </span>
+            <span>전화번호 : 010-2665-5307</span> <span>  |  </span>
+            <p>주소 : 서울특별시 광진구 능동로 209 (군자동), 세종대학교</p>
+            <p>AQUA-KOREA</p>
+            <img src="http://www.newscj.com/news/photo/201610/380601_341606_5826.jpg">
+            <img src="https://lh5.ggpht.com/yVfPv-yLjIuBjpKj41NLkLXmuVv8XzH0m2hf-_sz9lQDv9WB9SX0McB8Jn4bQe4w5Q=w300">
+            <img src="https://media.rocketpunch.com/cache/2e/d5/2ed5970e32545f0b1d74beac75914e7b.jpg">
+          </div>
+    </footer>
+  </body>
+
+</html>

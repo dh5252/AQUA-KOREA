@@ -1,0 +1,26 @@
+header{
+  height : 600px;
+  background-image :url('../UnderImage/UnderImage3.jpg');
+  background-size: cover;
+}
+
+/* AKIntro의 콘텐츠 배경을 검정색으로 설정한다. */
+.Frame{
+  background-color: black;
+}
+
+/* sea구역의 콘텐츠 스타일을 설정한다. */
+.sea {
+    text-align: center; /* 텍스트 중앙정렬 */
+    margin: auto; /* 중앙정렬 */
+    background-color: black;  /* 배경색 검정 */
+    color: white; /* 글자색 흰색 */
+    padding: 80px 0;  /*상하 80px, 좌우 0px 안쪽여백*/
+}
+
+/* large구역의 콘텐츠 스타일을 설정한다. */
+.large {
+    background-color: black;
+    text-align: center;
+    margin: auto; /*컨테이너 안 중앙정렬*/
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>AQUA-KOREA Event</title>
+    <link rel="stylesheet" type="text/css" href="전체적용스타일.css">
+    <link rel="stylesheet" type="text/css" href="Program&Event/Program&Event.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript" src="전체적용.js"></script>
+  </head>
+
+  <body>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="Program&Event/Program&Event.js"></script>
+    <script type="text/javascript" src="Program&Event/Eventpopup.js"></script>
+
+    <header>
+    <div class="TopBar">
+      <div class="Logo">
+        <h1><a href="Mainpage.html">AQUA-KOREA</a></h1>
+      </div>
+      <div class="betweenHidden">
+      </div>
+      <nav class="MainMenu">
+        <ul>
+          <li><a href="AKIntro.html">AQUA-KOREA</a>
+            <ul class ="SubMenu">
+              <li><a href="AKIntro.html">AQUA-KOREA 소개</a></li>
+              <li><a href="ExhibitionHall.html">전시관 안내</a></li>
+              <li><a href="Time.html">운영시간</a></li>
+              <li><a href="HowToCome.html">오시는 길</a></li>
+            </ul>
+          </li>
+          <li><a href="Program.html">프로그램/이벤트</a>
+            <ul class = "SubMenu">
+              <li><a href="Program.html">프로그램</a></li>
+              <li><a href="Event.html">이벤트</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="E-Ticket.html">온라인 예매</a>
+            <ul class = "SubMenu">
+              <li><a href="E-Ticket.html">온라인 예매</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="Group.html">단체</a>
+            <ul class = "SubMenu">
+              <li><a href="Group.html">단체 예약</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="QNA.html">고객의 소리</a>
+            <ul class = "SubMenu">
+              <li><a href="QNA.html">QnA</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <div class="Frame">
+
+      <aside class="Left_side"></aside>
+      <main class="Content">
+        <h2>이벤트</h2>
+        <p>풍성한 혜택이 기다리고 있어요!</p>
+
+        <br><br>
+        <div class="container"> <!--컨테이너는 진행중/종료의 컨텐츠가 담기는 div이다 -->
+
+          <ul class="tabs">  <!--진행중/ 종료의 기능과 스타일을 구현하기위해 tabs로 설정 -->
+            <li class="tab-link current" data-tab="tab-1">진행 중</li>
+            <li class="tab-link" data-tab="tab-2">종료</li>  <!--tab-link는 current상태를 바꿔 두 컨텐츠가 스왑될 수 있도록 클래스 나눔 -->
+          </ul>
+
+          <div id="tab-1" class="tab-content current"> <!--tab-1을 우선 current상태로 함.  -->
+            <table> <!-- 2*(이벤트 수) 표를 통한 레이아웃 -->
+              <tr>
+                <td width="300px"><a type="image" onclick="event1();"><img src="Program&Event/Event1.png" width="300px"></a></td>
+                <!-- 이미지 삽입과 클릭시 팝업창 오픈 -->
+                <td><strong>의료진 감사 이벤트</strong>
+                  <br><br>의료진 여러분의 많은 헌신으로 대한민국이 코로나19 위기를 극복해 나가고 있습니다.
+                  <br><br>자세한 내용은 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="event2();"><img src="Program&Event/Event2.jpg" width="300px"></a></td>
+                <td><strong>4인 가족 특별 할인 이벤트!</strong>
+                  <br><br>4인 가족이라면 누구나!<br>
+                  가족끼리 오순도순 함께하는 아쿠아리움 탐방!!
+                  <br><br>자세한 내용은 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="event3();"><img src="Program&Event/Event3.jpg" width="300px"></a></td>
+                <td><strong>3인 가족 특별 할인 이벤트!</strong>
+                  <br><br>3인 가족은 가족도 아니냐!<br>
+                  그래서 준비했습니다!<br>
+                  3인가족 특별 할인 이벤트!!!
+                  <br><br>자세한 내용은 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+            </table>
+            <ul class="Program-pagination"> <!-- 이벤트 쪽 수-->
+              <li><a href="#">&laquo</a></li>
+              <li><a href="#" class ="active">1</a></li>
+              <li><a href="#">&raquo</a></li>
+            </ul>
+          </div>
+          <div id="tab-2" class="tab-content"> <!-- current상태가 아닌 탭. 화면에 보이지 않는 상태 -->
+            <table> <!-- 레이아웃은 tab1과 동일하다 -->
+              <tr>
+                <td width="300px"><a type="image" onclick="event4();"><img src="Program&Event/Event4.jpg" width="300px"></a></td>
+                <td><strong>달빛따라 물길따라</strong>
+                  <br><br> 추석 특별 이벤트 <br>
+                  매일 똑같은 추석.. 지겹지 않으신가요?<br>
+                  아쿠아리움에서 즐기는 풍성한 한가위!
+                  <br><br>자세한 내용은 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="event5();"><img src="Program&Event/Event5.jpg" width="300px"></a></td>
+                <td><strong>HalloWeek Event!</strong>
+                  <br><br>◀Halloween Day▶<br>
+                  할로윈 데이에 특별한 아쿠아리움을 경험해보세요!<br>
+                  ps.할인은 보너스♡
+                  <br><br>자세한 내용은 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="event6();"><img src="Program&Event/Event6.jpg" width="300px"></a></td>
+                <td><strong>Lovely garden eel week</strong>
+                  <br><br>가든일의 생태를 알아보고 여러가지 이벤트에 참여하세요!
+                  <br><br>자세한 내용은 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+            </table>
+            <ul class="Program-pagination">
+              <li><a href="#">&laquo</a></li>
+              <li><a href="#" class ="active">1</a></li>
+              <li><a href="#">&raquo</a></li>
+            </ul>
+          </div>
+        </div>
+        <br><br>
+      </main>
+      <aside class="Right_side"></aside>
+
+    </div>
+
+    <hr style="border: solid 1px gray;">
+    <footer>
+        <div class="foo_div1">
+            <span>(주)AQUA-KOREA</span> <span>  |  </span>
+            <span>공동대표 : 안치원,장유성,정진희</span> <span>  |  </span>
+            <span>전화번호 : 010-2665-5307</span> <span>  |  </span>
+            <p>주소 : 서울특별시 광진구 능동로 209 (군자동), 세종대학교</p>
+            <p>AQUA-KOREA</p>
+            <img src="http://www.newscj.com/news/photo/201610/380601_341606_5826.jpg">
+            <img src="https://lh5.ggpht.com/yVfPv-yLjIuBjpKj41NLkLXmuVv8XzH0m2hf-_sz9lQDv9WB9SX0McB8Jn4bQe4w5Q=w300">
+            <img src="https://media.rocketpunch.com/cache/2e/d5/2ed5970e32545f0b1d74beac75914e7b.jpg">
+          </div>
+    </footer>
+  </body>
+
+</html>

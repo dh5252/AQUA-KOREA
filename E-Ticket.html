@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>E-ticket 구매</title>
+    <link rel="stylesheet" type="text/css" href="전체적용스타일.css">
+    <link rel="stylesheet" type="text/css" href="E-ticket/E-Ticket.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript" src="전체적용.js"></script>
+  </head>
+
+  <body onload="init(); init_k();">
+
+  <script type="text/javascript" src="E-ticket/E-Ticket.js"></script>
+
+  <header>
+  <div class="TopBar">
+    <div class="Logo">
+      <h1><a href="Mainpage.html">AQUA-KOREA</a></h1>
+    </div>
+    <div class="betweenHidden">
+    </div>
+    <nav class="MainMenu">
+      <ul>
+        <li><a href="AKIntro.html">AQUA-KOREA</a>
+          <ul class ="SubMenu">
+            <li><a href="AKIntro.html">AQUA-KOREA 소개</a></li>
+            <li><a href="ExhibitionHall.html">전시관 안내</a></li>
+            <li><a href="Time.html">운영시간</a></li>
+            <li><a href="HowToCome.html">오시는 길</a></li>
+          </ul>
+        </li>
+        <li><a href="Program.html">프로그램/이벤트</a>
+          <ul class = "SubMenu">
+            <li><a href="Program.html">프로그램</a></li>
+            <li><a href="Event.html">이벤트</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+        <li><a href="E-Ticket.html">온라인 예매</a>
+          <ul class = "SubMenu">
+            <li><a href="E-Ticket.html">온라인 예매</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+        <li><a href="Group.html">단체</a>
+          <ul class = "SubMenu">
+            <li><a href="Group.html">단체 예약</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+        <li><a href="QNA.html">고객의 소리</a>
+          <ul class = "SubMenu">
+            <li><a href="QNA.html">QnA</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="Frame">
+
+      <aside class="Left_side"></aside>
+      <main class="Content">
+
+        <h2>E-ticket구매</h2>   <!--페이지의 제목-->
+          <p>AQUA-KOREA의 입장권을 합리적인 가격으로 만나보세요!</p>  <!--부가 설명-->
+
+          <br><br>
+
+          <div class="BOX"> <!--성인/청소년의 티켓 구역-->
+            <img src="E-ticket/성인.jpg" alt="ICON IMAGE" width="600" height="250"> <!--이미지 삽입-->
+            <h3>가격 : 28000 원</h3> <!--가격 명시-->
+            <form name="form" method="get"> <!--form이름: form, 방법은 get-->
+            수량 : <input type=hidden name="sell_price" value="28000">  <!--이름: sell_price 값 28000-->
+            <input type="text" name="amount" value="0" size="3" onchange="change();"> <!--값은 0부터 시작, onchange이벤트를 이용해 change함수를 호출하고 티켓의 갯수를 출력한다-->
+            <input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();"><br>
+            <!-- +또는 - 버튼을 누를시, onclick이벤트를 이용해 각각 add, del함수를 호출한다 / +, -버튼을 화면에 나타낸다-->
+
+            금액 : <input type="text" name="sum" size="11" readonly>원  <!--금액을 출력한다 / readonly를 설정하여 사용자가 임의로 값을 바꿀수 없도록 한다.-->
+            </form>
+          </div>
+          <br><br>
+
+
+          <div class="BOX"> <!--어린이의 티켓 구역-->
+            <img src="E-ticket/어린이.jpg" alt="ICON IMAGE" width="600" height="250">  <!--이미지 삽입-->
+            <h3>가격 : 24000 원</h3> <!--가격 명시-->
+
+            <form name="form_k" method="get"> <!--form이름: form_k, 방법은 get-->
+            수량 : <input type=hidden name="sell_price_k" value="24000">  <!--이름: sell_price_k 값 24000-->
+            <input type="text" name="amount_k" value="0" size="3" onchange="change_k();"> <!--값은 0부터 시작, onchange이벤트를 이용해 change_k함수를 호출하고 티켓의 갯수를 출력한다-->
+            <input type="button" value=" + " onclick="add_k();"><input type="button" value=" - " onclick="del_k();"><br>
+            <!-- +또는 - 버튼을 누를시, onclick이벤트를 이용해 각각 add_k, del_k함수를 호출한다 / +, -버튼을 화면에 나타낸다-->
+            금액 : <input type="text" name="sum_k" size="11" readonly>원  <!--금액을 출력한다 / readonly를 설정하여 사용자가 임의로 값을 바꿀수 없도록 한다.-->
+            </form>
+          </div>
+          <br><br>
+
+          <button id="buttonbuy" onclick="btn();">구매하기</button>   <!--구매하기 버튼, onclick이벤트를 이용하여 클릭시 alert창 출력-->
+          <br><br>
+
+          <h2>모바일티켓 안내</h2>
+          <div class="BOX2">  <!--티켓 구매 주의사항 구역-->
+            <b>상품 구매 유의사항</b>
+            <br></br>
+            <ul>  <!--ul과 li를 이용하여 리스트출력-->
+              <li>성인/ 청소년 만 13세 이상, 어린이는 36개월 이상~만 12세</li>
+              <li>구매 티켓은 구매 (당일)로 부터 30일 이내에 1회 사용이 가능합니다.</li>
+              <li>본 티켓은 구매일로부터 30일 이내에 1회 사용 가능 합니다.</li>
+              <li>재 입장 불가 ~ 36개월 미만 유아는 무료입장(증빙서류지참)</li>
+            </ul>
+            <br></br>
+            <b>취소/환불 안내</b>
+            <br></br>
+            <ul>
+              <li>구매 후 미사용건 한하여 7일이내 취소/환불 가능합니다.</li>
+              <li>권종 및 인원 변경 시 전체 취소 후 다시 구매하셔야 합니다. *부분취소 불가</li>
+            </ul>
+            <br></br>
+            <b>고객센터</b>
+            <br></br>
+            <ul>
+              <li>티켓의 취소, 재발송, 사용 문의는 고객센터로 문의주세요!</li>
+              <li>고객센터 안내 010) 5914 - 2655 / 010) 2665 - 5307</li>
+              <li>오전 10시 ~ 오후 8시까지 평일, 주말, 공휴일, 명절 등을 포함하여 1년 365일 운영됩니다.</li>
+            </ul>
+            <br></br>
+          </div>
+        <br><br><br>
+      </main>
+      <aside class="Right_side"></aside>
+
+    </div>
+
+    <hr style="border: solid 1px gray;">
+    <footer>
+        <div class="foo_div1">
+            <span>(주)AQUA-KOREA</span> <span>  |  </span>
+            <span>공동대표 : 안치원,장유성,정진희</span> <span>  |  </span>
+            <span>전화번호 : 010-2665-5307</span> <span>  |  </span>
+            <p>주소 : 서울특별시 광진구 능동로 209 (군자동), 세종대학교</p>
+            <p>AQUA-KOREA</p>
+            <img src="http://www.newscj.com/news/photo/201610/380601_341606_5826.jpg">
+            <img src="https://lh5.ggpht.com/yVfPv-yLjIuBjpKj41NLkLXmuVv8XzH0m2hf-_sz9lQDv9WB9SX0McB8Jn4bQe4w5Q=w300">
+            <img src="https://media.rocketpunch.com/cache/2e/d5/2ed5970e32545f0b1d74beac75914e7b.jpg">
+          </div>
+    </footer>
+  </body>
+
+</html>

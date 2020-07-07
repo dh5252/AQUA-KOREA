@@ -1,0 +1,14 @@
+header{
+  height : 600px;
+  background-image :url('../UnderImage/UnderImage2.jpg');
+  background-size: cover;
+}
+
+/*오시는 길 li의 text 왼쪽 정렬*/
+.Content > ul > li{
+  text-align: left;
+}
+/*오시는 길 h3의 text 왼쪽 정렬*/
+.Content > h3{
+  text-align: left;
+}

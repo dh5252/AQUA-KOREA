@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>운영 시간</title>
+   <link rel="stylesheet" type="text/css" href="전체적용스타일.css">
+   <link rel="stylesheet" type="text/css" href="TimeInfo/Time.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+   <script type="text/javascript" src="전체적용.js"></script>
+   <script type="text/javascript" src="TimeInfo/Clock.js" ></script>
+</head>
+
+<body onload="printClock();">
+  <!-- 페이지의 body가 동작할때 시계를 동작시킨다. -->
+
+ <header>
+ <div class="TopBar">
+   <div class="Logo">
+     <h1><a href="Mainpage.html">AQUA-KOREA</a></h1>
+   </div>
+   <div class="betweenHidden">
+   </div>
+   <nav class="MainMenu">
+     <ul>
+       <li><a href="AKIntro.html">AQUA-KOREA</a>
+         <ul class ="SubMenu">
+           <li><a href="AKIntro.html">AQUA-KOREA 소개</a></li>
+           <li><a href="ExhibitionHall.html">전시관 안내</a></li>
+           <li><a href="Time.html">운영시간</a></li>
+           <li><a href="HowToCome.html">오시는 길</a></li>
+         </ul>
+       </li>
+       <li><a href="Program.html">프로그램/이벤트</a>
+         <ul class = "SubMenu">
+           <li><a href="Program.html">프로그램</a></li>
+           <li><a href="Event.html">이벤트</a></li>
+           <li>&nbsp</li>
+           <li>&nbsp</li>
+         </ul>
+       </li>
+       <li><a href="E-Ticket.html">온라인 예매</a>
+         <ul class = "SubMenu">
+           <li><a href="E-Ticket.html">온라인 예매</a></li>
+           <li>&nbsp</li>
+           <li>&nbsp</li>
+           <li>&nbsp</li>
+         </ul>
+       </li>
+       <li><a href="Group.html">단체</a>
+         <ul class = "SubMenu">
+           <li><a href="Group.html">단체 예약</a></li>
+           <li>&nbsp</li>
+           <li>&nbsp</li>
+           <li>&nbsp</li>
+         </ul>
+       </li>
+       <li><a href="QNA.html">고객의 소리</a>
+         <ul class = "SubMenu">
+           <li><a href="QNA.html">QnA</a></li>
+           <li>&nbsp</li>
+           <li>&nbsp</li>
+           <li>&nbsp</li>
+         </ul>
+       </li>
+     </ul>
+   </nav>
+ </div>
+</header>
+
+
+   <div class="Frame">
+
+       <aside class="Left_side"></aside>
+       <main class="Content">
+           <br><h1>AQUA-KOREA는 365일 연중무휴로 운영합니다.</h1>
+           <br><br>
+           <!--현재 시간을 삽입한다-->
+           <div style="border:1px solid #dedede; width:700px; height:250px; line-height:250px; color:#666;font-size:100px; text-align:center; margin : 0 auto;" id="clock">
+             </div>
+
+           <br><h2>< 운영 시간 안내 ></h2><br>
+           <!--table을 만들어 운영시간을 나타낸다 -->
+           <table class="Time">
+               <tr>
+                   <th>평일(월-목)</th>
+                   <td>
+                       입장 시간 : 오전 10시 ~ 19시(오후 7시)
+                       관람 가능 시간 : 20시까지
+                   </td>
+               </tr>
+               <tr>
+                   <th>주말(금-일)</th>
+                   <td>
+                       입장 시간 : 오전 10시 ~ 21시(오후 9시)
+                       관람 가능 시간: 22시까지
+                   </td>
+               </tr>
+               <tr>
+                   <th>공휴일</th>
+                   <td>
+                       입장 시간 : 오전 10시 ~ 21시(오후 9시)
+                       관람 가능 시간: 22시까지
+                   </td>
+               </tr>
+           </table>
+
+           <!--관람소요시간, 관람가능시간 정보를 나타낸다-->
+           <br><br><h2>< 관람 안내 ></h2><br>
+           <div class="information">
+               <br />
+               <ul>
+                 <li>AQUA-KOREA의 일반적인 관람 소요시간은 약 2시간입니다. <br /></li>
+                 (위 관람 소요 시간은 개인적인 차이가 있을 수 있습니다)  <br /> <br /></li>
+                 <li>관람 가능 시간은 마지막 입장 시간 기준 1시간 뒤입니다.
+               </ul>
+           </div>
+           <br><br>
+       </main>
+       <aside class="Right_side"></aside>
+
+   </div>
+
+   <hr style="border: solid 1px gray;">
+   <footer>
+       <div class="foo_div1">
+           <span>(주)AQUA-KOREA</span> <span>  |  </span>
+           <span>공동대표 : 안치원,장유성,정진희</span> <span>  |  </span>
+           <span>전화번호 : 010-2665-5307</span> <span>  |  </span>
+           <p>주소 : 서울특별시 광진구 능동로 209 (군자동), 세종대학교</p>
+           <p>AQUA-KOREA</p>
+           <img src="http://www.newscj.com/news/photo/201610/380601_341606_5826.jpg">
+           <img src="https://lh5.ggpht.com/yVfPv-yLjIuBjpKj41NLkLXmuVv8XzH0m2hf-_sz9lQDv9WB9SX0McB8Jn4bQe4w5Q=w300">
+           <img src="https://media.rocketpunch.com/cache/2e/d5/2ed5970e32545f0b1d74beac75914e7b.jpg">
+         </div>
+   </footer>
+
+</body>
+</html>

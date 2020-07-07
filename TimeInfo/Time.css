@@ -1,0 +1,44 @@
+header{
+  height : 600px;
+  background-image :url('../UnderImage/UnderImage.jpg');
+  background-size: cover;
+}
+
+/*운영 시간 안내 table의 스타일*/
+.Time {
+    width: 700px;
+    height: 300px;
+    margin: auto;
+    border-collapse: separate;
+    border-top: 1px solid #ccc;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/*운영 시간 안내 table의 th 스타일*/
+.Time th {
+        background-color: #CEECF5;
+        width: 100px;
+        padding: 10px;  /*안쪽 여백 10px*/
+        text-align: center; /*텍스트중앙정렬*/
+        font-weight: bold;
+        vertical-align: middle;   /*수직중앙정렬*/
+        border-bottom: 1px solid #ccc;
+        color: black;
+}
+
+/*운영 시간 안내 table의 td 스타일*/
+.Time td {
+        width: 300px;
+        padding: 10px;  /*안쪽 여백 10px*/
+        vertical-align: middle; /*수직중앙정렬*/
+        border: 1px solid #ccc;
+}
+
+/*관람 안내의 스타일*/
+.information {
+    width: 700px;
+    height: 150px;
+    border: 1px solid #ccc;
+    margin: auto; /*중앙정렬*/
+}

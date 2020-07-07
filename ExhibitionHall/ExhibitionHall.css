@@ -1,0 +1,50 @@
+header{
+  height : 600px;
+  background-image :url('../UnderImage/UnderImage2.jpg');
+  background-size: cover;
+}
+
+/* 전시관안내의 콘텐츠 스타일을 설정한다. */
+#exhibition{
+  text-align: left;
+  color:black;
+  background-color:white;
+  font-size:1.3em;
+  border:0;
+  font-family: "나눔스퀘어라운드", "NanumGothic" ,"Batang", serif;
+}
+
+/* tooltip의 상태를 설정한다. */
+.tooltip {
+  display: inline-block;  /* inline-block은 줄바꿈이 되지 않지만 크기를 지정할 수 있다 */
+  color:black;
+  font-size:1em;
+  border:0;
+  position: relative; /*위치 설정*/
+  padding:5px 50px;
+}
+
+/* tooltip의 tooltiptext의 상태를 설정한다. */
+.tooltip  .tooltiptext {
+  visibility: hidden; /* visibility속성을 hidden으로 설정하여 보이지 않도록한다 */
+  display: inline-block;
+  width: 370px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: -5px;
+  left: 110%;
+  font-size: 13px;
+}
+
+/* tooltip이 hover되었을 경우 색을 blue로 바꾼다 */
+.tooltip:hover{
+    color:blue;
+}
+/* tooltip이 hover되었을 경우 tooltiptext를 보이는 상태로 설정한다 */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

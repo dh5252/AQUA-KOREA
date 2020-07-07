@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+/* 폰트를 추가하기위해 추가함. */
+
+html {
+    scroll-behavior: smooth;
+}
+/* 매끄러운 스크롤 속성 */
+
+ body, html{
+   margin : 0;
+   padding: 0;
+ }
+ /* 페이지에 여백 없게 설정 */
+
+  .TopBar{
+    width : 100%;
+    margin : 0 auto;
+  }
+  /* topbar 가운데 정렬, 화면에 꽉 차도록 구성 */
+  .TopBar-fixed{
+    position: fixed;
+    z-index: 1000;
+    background-color: #BDBDBD;
+    opacity: 0.8;
+    margin : 0 auto;
+  }
+  /* fixed 상태의 TopBar는 투명도를 설정하고 z-index를 설정하여 항상 보이게함 */
+
+  .Logo, .betweenHidden, .MainMenu{
+    display: inline-block;
+    vertical-align: top;
+    height: 100px;
+    margin : 0 auto;
+    text-align: center;
+  }
+  /* display를 inline-block으로 설정하여 가로배치가 가능하도록 하였고,
+  높이와 여백 등 디자인적 요소를 알맞게 설정. */
+  .Logo{
+    width : 18%;
+    font-family: 'Comic Sans MS','Lemonada', cursive;
+  }
+  /* 로고의 스타일 설정 */
+  .Logo > h1 > a{
+    text-decoration: none;
+    color:white;
+  }
+  /* a태그의 디폴트 파란텍스트와 밑줄 제거 */
+  .Logo > h1 > a:hover{
+    color: #0B0B61;
+  }
+  /* 로고에 hover시 색상변경 */
+
+  .betweenHidden{
+    width : 16%;
+    visibility: hidden;
+  }
+  /* betweenHidden은 로고와 메뉴바 사이의 빈공간. 보이지 않게함 */
+  .MainMenu{
+    width : 65%;
+    font-size: 18px;
+    font-weight:bold;
+    font-family: "나눔스퀘어라운드", "NanumGothic" ,"Batang", serif;
+  }
+  /* 메인 메뉴 디자인 설정 */
+  .MainMenu > ul{
+    margin-top: 0;
+  }
+  /* 위쪽 여백 없게함 */
+  .MainMenu > ul > li{
+    float: left;
+    width: 20%;
+    line-height: 100px;
+    list-style: none;
+  }
+  /* float를 left로 하여 리스트가 가로로 될 수 있게함.
+  list-style을 none으로 하여 리스트의 디폴트를 초기화 */
+
+  .MainMenu > ul > li > a{
+    display: block;
+    color: white;
+    text-decoration:  none;
+  }
+  /* display를 block으로 하여 a태그를 블록화함. a태그 디폴트값 제거 */
+  .MainMenu > ul:hover > li > a {
+    background-color: white;
+    border-bottom: 1px solid gray;
+    color : #585858;
+  }
+  /* 만약 메인메뉴의 ul에 hover하면 블록화된 a태그의 블록 색상, 텍스트 색상이 바뀌도록 구현
+  border-bottom을 설정하여 서브메뉴와 확실한 구분 */
+  .SubMenu{
+    display : none;
+    border: 1px solid gray;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 1px;
+    width: 100%;
+    background-color: white;
+  }
+  /* 서브메뉴의 display를 none으로 설정하여 평소에는 보이지 않게함.
+  테두리, 여백, 정렬, 색상 설정하여 디자인 */
+
+  .SubMenu > li > a{
+    color: #585858;
+    text-decoration:  none;
+  }
+  /* a태그 디폴트값 초기화 */
+  .SubMenu > li > a:hover{
+    color : #0431B4;
+  }
+  /* a태그에 hover시 색상변경 */
+
+
+  .Frame{
+    width : 1530px;
+    margin  : auto;
+    font-family: "나눔스퀘어라운드", "NanumGothic" ,"Batang", serif;
+  }
+  /* Frame 가로 크기, 가운데정렬, 폰트 설정 */
+  .Left_side,.Right_side,.Content{
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+  /*  안의 컨텐츠 크기에 따라 각 div크기 조정되도록 설정 */
+
+  .Left_side,.Right_side{
+    width : 18%;
+  }
+  /* 좌우 여백 크기 적당히 설정 */
+  .Content{
+    width : 63%;
+    text-align: center;
+    background-color: white;
+  }
+  /* 컨텐츠 div 설정 */
+
+  footer {
+      width : auto;
+  }
+  /* 넓이 설정 */
+
+  .foo_div1 {
+      text-align: center;
+  }
+  /* 텍스트 가운데 정렬 */
+
+  .foo_div1 span {
+      font-size: 15px;
+      color: black;
+  }
+/* 폰트 설정 */
+  .foo_div1 p {
+      margin-top: 5px;
+      color: black;
+  }
+  /* footer 내용물 설정 */
+
+  .foo_div1 img {
+      width: 25px;
+      height: 25px;
+      margin-top: 10px;
+  }
+  /* 이미지 설정 */

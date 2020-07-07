@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>AQUA-KOREA 프로그램</title>
+    <link rel="stylesheet" type="text/css" href="전체적용스타일.css">
+    <link rel="stylesheet" href="Program&Event/Program&Event.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript" src="전체적용.js"></script>
+
+  </head>
+
+  <body>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="Program&Event/Program&Event.js"></script>
+    <script type="text/javascript" src="Program&Event/Programpopup.js"></script>
+
+    <header>
+    <div class="TopBar">
+      <div class="Logo">
+        <h1><a href="Mainpage.html">AQUA-KOREA</a></h1>
+      </div>
+      <div class="betweenHidden">
+      </div>
+      <nav class="MainMenu">
+        <ul>
+          <li><a href="AKIntro.html">AQUA-KOREA</a>
+            <ul class ="SubMenu">
+              <li><a href="AKIntro.html">AQUA-KOREA 소개</a></li>
+              <li><a href="ExhibitionHall.html">전시관 안내</a></li>
+              <li><a href="Time.html">운영시간</a></li>
+              <li><a href="HowToCome.html">오시는 길</a></li>
+            </ul>
+          </li>
+          <li><a href="Program.html">프로그램/이벤트</a>
+            <ul class = "SubMenu">
+              <li><a href="Program.html">프로그램</a></li>
+              <li><a href="Event.html">이벤트</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="E-Ticket.html">온라인 예매</a>
+            <ul class = "SubMenu">
+              <li><a href="E-Ticket.html">온라인 예매</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="Group.html">단체</a>
+            <ul class = "SubMenu">
+              <li><a href="Group.html">단체 예약</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="QNA.html">고객의 소리</a>
+            <ul class = "SubMenu">
+              <li><a href="QNA.html">QnA</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <div class="Frame">
+
+      <aside class="Left_side"></aside>
+      <main class="Content">
+        <h2>프로그램</h2>
+        <p>AQUA-KOREA만의 신선하고 즐거운 프로그램을 만나보세요!</p>
+        <br><br>
+        <div class="container"> <!--컨테이너는 진행중/종료의 컨텐츠가 담기는 div이다 -->
+
+        	<ul class="tabs"> <!--진행중/ 종료의 기능과 스타일을 구현하기위해 tabs로 설정 -->
+        		<li class="tab-link current" data-tab="tab-1">진행 중</li>
+        		<li class="tab-link" data-tab="tab-2">종료</li> <!--tab-link는 current상태를 바꿔 두 컨텐츠가 스왑될 수 있도록 클래스 나눔 -->
+        	</ul>
+
+        	<div id="tab-1" class="tab-content current"> <!--tab-1을 우선 current상태로 함.  -->
+            <table> <!-- 2*(프로그램수) 표를 통한 레이아웃 -->
+              <tr>
+                <td width="300px"><a type="image" onclick="program1();"><img src="Program&Event/program1.jpg" width="300px"></a></td>
+                <!-- 이미지 삽입과 클릭시 팝업창 오픈 -->
+                <td><strong>메인수조 체험다이빙</strong>
+                  <br><br>국내최대 규모 25m 메인수조 속에서 펼쳐지는 바다 속 풍경을 담은 씨워킹, 씨라이딩, 스노쿨링 체험!
+                          다양한 바다생물들이 눈앞에서 펼쳐지는 롯데월드 아쿠아리움에서 특별한 추억을 남겨 보세요 수영을 못해도 잠수를 못해도 전문 강사가 안전하게 아름다운 수중세계를 만끽하게 해드립니다.
+                  <br><br>자세한 정보는 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="program2();"><img src="Program&Event/program2.jpg" width="300px"></a></td>
+                <td><strong>물고기 도시락</strong>
+                  <br><br>AQUA-KOREA에서만 즐길 수 있는 ★SPECIAL 먹이주기 체험★
+                          물고기 도시락, 5첩도시락 체험하새우!
+                  <br><br>자세한 정보는 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="program3();"><img src="Program&Event/program3.jpg" width="300px"></a></td>
+                <td><strong>아쿠아 어린이 수의사</strong>
+                  <br><br>내 꿈은 수의사!
+                          수의사가 되기 위한 첫 걸음, 아쿠아리움 수의사와 함께라면 나도 이제 어린이 수의사!!
+                  <br><br>자세한 정보는 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+            </table>
+            <ul class="Program-pagination"> <!-- 프로그램 쪽 수-->
+              <li><a href="#">&laquo</a></li>
+              <li><a href="#" class ="active">1</a></li>
+              <li><a href="#">&raquo</a></li>
+            </ul>
+        	</div>
+        	<div id="tab-2" class="tab-content"> <!-- current상태가 아닌 탭. 화면에 보이지 않는 상태 -->
+            <table> <!-- 레이아웃은 tab1과 동일하다 -->
+              <tr>
+                <td width="300px"><a type="image" onclick="program4();"><img src="Program&Event/program4.jpg" width="300px"></a></td>
+                <td><strong>나만의 수조 만들기</strong>
+                  <br><br> 다양한 해양생물을 체험하고 기르면서 특별한 힐링의 시간을 보내세요!
+                  <br><br>자세한 정보는 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="program5();"><img src="Program&Event/program5.jpg" width="300px"></a></td>
+                <td><strong>잉어 젖병 먹이주기</strong>
+                  <br><br>아쿠아리움에 살고 있는 아름다운 비단 잉어들을 가까이 관찰하고 먹이를 줄 수 있습니다.
+                          그런데 잉어가 아기처럼 젖병을 빤다는 놀라운 사실!
+                          똑똑한 잉어는 사람이 지나가기만해도 입을 내밀며 먹이를 달라 보챕니다.
+                          젖병으로 먹이를 주는 놀랍고 신기한 경험을 지금 시작해보세요.
+                  <br><br>자세한 정보는 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+              <tr>
+                <td width="300px"><a type="image" onclick="program6();"><img src="Program&Event/program6.jpg" width="300px"></a></td>
+                <td><strong>아쿠아 탐험대</strong>
+                  <br><br>매주 토요일은 탐험대장과 함께 아쿠아리움 탐험을 떠나는 날!
+                          탐험대장과 함께하는 아쿠아리움은 특별함 가득! 즐거움이 100배!
+                  <br><br>자세한 정보는 왼쪽 포스터를 클릭하세요!</td>
+              </tr>
+            </table>
+            <ul class="Program-pagination">
+              <li><a href="#">&laquo</a></li>
+              <li><a href="#" class ="active">1</a></li>
+              <li><a href="#">&raquo</a></li>
+            </ul>
+        	</div>
+        </div>
+        <br><br>
+      </main>
+      <aside class="Right_side"></aside>
+
+    </div>
+
+    <hr style="border: solid 1px gray;">
+    <footer>
+        <div class="foo_div1">
+            <span>(주)AQUA-KOREA</span> <span>  |  </span>
+            <span>공동대표 : 안치원,장유성,정진희</span> <span>  |  </span>
+            <span>전화번호 : 010-2665-5307</span> <span>  |  </span>
+            <p>주소 : 서울특별시 광진구 능동로 209 (군자동), 세종대학교</p>
+            <p>AQUA-KOREA</p>
+            <img src="http://www.newscj.com/news/photo/201610/380601_341606_5826.jpg">
+            <img src="https://lh5.ggpht.com/yVfPv-yLjIuBjpKj41NLkLXmuVv8XzH0m2hf-_sz9lQDv9WB9SX0McB8Jn4bQe4w5Q=w300">
+            <img src="https://media.rocketpunch.com/cache/2e/d5/2ed5970e32545f0b1d74beac75914e7b.jpg">
+          </div>
+    </footer>
+  </body>
+
+</html>

@@ -1,0 +1,43 @@
+/*헤더 설정*/
+header {
+    height: 600px;
+    background-image: url('../UnderImage/UnderImage2.jpg');
+    background-size: cover;
+}
+
+/*질문 표 스타일 설정*/
+table {
+    width: 100%;/*넓이 100%*/
+    height: 30%;/*높이 30%*/
+    margin: auto;/*바깥여백 자동*/
+    text-align: left; /*글자는 왼쪽으로 깔끔하게 정렬 */
+}
+
+/*버튼 스타일*/
+button {
+    cursor: pointer; /*마우스 커서 형태 지정*/
+}
+
+/*질문순서 스타일*/
+.pagination {
+    display: inline-block;/*inline-block*/
+}
+
+    /*질문순서 a태그 스타일*/
+    .pagination a {
+        color: black;/*글씨 검정*/
+        float: left;/*왼쪽으로 부유시킴*/
+        padding: 8px 16px;/*안쪽 여백 설정*/
+        text-decoration: none;/*글씨 장식 안함 */
+    }
+        /*질문순서  active 스타일*/
+        .pagination a.active {
+            background-color: skyBlue;/*배경 하늘색*/
+            color: white;/*글씨 흰색*/
+            border-radius: 5px;/*테두리 둥글게*/
+        }
+        /*질문순서 마우스를 오버했을 때 (단, active는 제외) */
+        .pagination a:hover:not(.active) {
+            background-color: #ddd; /*배경 지정*/
+            border-radius: 5px; /*테두리 둥글게*/
+        }

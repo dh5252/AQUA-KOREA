@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>단체 예약</title>
+
+    <link rel="stylesheet" type="text/css" href="전체적용스타일.css">
+    <link rel="stylesheet" type="text/css" href="Group/Group.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript" src="전체적용.js"></script>
+</head>
+
+<body>
+
+  <header>
+  <div class="TopBar">
+    <div class="Logo">
+      <h1><a href="Mainpage.html">AQUA-KOREA</a></h1>
+    </div>
+    <div class="betweenHidden">
+    </div>
+    <nav class="MainMenu">
+      <ul>
+        <li><a href="AKIntro.html">AQUA-KOREA</a>
+          <ul class ="SubMenu">
+            <li><a href="AKIntro.html">AQUA-KOREA 소개</a></li>
+            <li><a href="ExhibitionHall.html">전시관 안내</a></li>
+            <li><a href="Time.html">운영시간</a></li>
+            <li><a href="HowToCome.html">오시는 길</a></li>
+          </ul>
+        </li>
+        <li><a href="Program.html">프로그램/이벤트</a>
+          <ul class = "SubMenu">
+            <li><a href="Program.html">프로그램</a></li>
+            <li><a href="Event.html">이벤트</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+        <li><a href="E-Ticket.html">온라인 예매</a>
+          <ul class = "SubMenu">
+            <li><a href="E-Ticket.html">온라인 예매</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+        <li><a href="Group.html">단체</a>
+          <ul class = "SubMenu">
+            <li><a href="Group.html">단체 예약</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+        <li><a href="QNA.html">고객의 소리</a>
+          <ul class = "SubMenu">
+            <li><a href="QNA.html">QnA</a></li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+            <li>&nbsp</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+
+    <div class="Frame">
+
+        <aside class="Left_side"></aside>
+        <main class="Content">
+            <h1>AQUA-KOREA 단체 예약</h1>  <!--페이지의 제목-->
+            <p>AQUA-KOREA 단체 예약 페이지입니다. 아래 양식에 맞게 예약 정보를 입력해주세요.</p> <!--부가 설명-->
+            <br>
+            <form name="form" method="post">
+                <!--전체 묶기-->
+                <table class="group">
+                    <!--예약 표-->
+                    <!--colgroup을 이용해 표 크기를 조정한다-->
+                    <colgroup class="m_none">
+                        <!--표의 왼쪽 칸-->
+                        <col style="width:20%;"><!--폭 조정-->
+                        <col>
+                    </colgroup>
+                    <colgroup class="pc_none colgroup">
+                        <!--표의 오른쪽 칸-->
+                        <col style="width:50%;"><!--폭 조정-->
+                        <col>
+                    </colgroup>
+
+                    <tr>
+                        <!--단체명-->
+                        <th height="30" width="10"><label for="GroupName">단체명</label> </th>
+                        <td>
+                            <input type="text" size="50" id="GroupName" name="GroupName" placeholder="단체명" value="" maxlength="50" />
+                            <!--단체명을 입력받는다. 최대 길이는 50이고, placeholder를 이용해 박스에 '단체명'을 입력한다는 것을 알려준다-->
+                            <br />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--예약자명-->
+                        <th height="30"><label for="Name">예약자명</label></th>
+                        <td>
+                            <input type="text" size="50" id="Name" name="Name" placeholder="예약자명" value="" maxlength="25" />
+                            <!--단체 대표 예약자명을 입력받는다. 최대 길이는 25이고, placeholder를 이용해 박스에 '예약자명'을 입력한다는 것을 알려준다-->
+                            <br />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--휴대폰번호-->
+                        <th height="30"><label for="Phone">휴대폰</label></th>
+                        <td>
+                            <select>
+                                <!--휴대폰 앞 번호는 4가지 중에 선택할 수 있게 한다-->
+                                <option>010</option>
+                                <option>011</option>
+                                <option>016</option>
+                                <option>017</option>
+                            </select>
+                            -
+                            <input type="text" size="10" name="Phone1" value="" /><!--가운데 자리 입력-->
+                            -
+                            <input type="text" size="10" name="Phone2" value="" /><!--마지막 자리 입력-->
+                            <br />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--이메일-->
+                        <th height="30"><label for="email">이메일</label></th>
+                        <td>
+                            <input type="text" id="email" name="email" placeholder="email" value="" /><!--@전까지 이메일 주소를 입력받는다-->
+                            @
+                            <input name="email2" type="text" class="box" id="email2" size="20"><!--@뒷주소-->
+                            <select name="email_select" class="box" id="email_select" onchange="checkemailaddy()">
+                                <!--주소를 선택한다 / checkemailaddy함수를 호출한다-->
+                                <option value="1">직접입력</option>
+                                <option value="daum.net">daum.net</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="nate.com">nate.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--방문날짜-->
+                        <th><label for="VisitDate">방문날짜</label></th>
+                        <td>
+                            <input type="text" size="30" id="VisitDate" name="VisitDate" placeholder="yyyy-mm-dd형태로 입력하세요" maxlength="10" />
+                            <!--방문날짜을 입력받는다. 최대 길이는 10이고, placeholder를 이용해 박스에 방문날짜 입력 양식을 알려준다-->
+                            <select id="VISIT_TIME">
+                                <!--방문 시간은 아래 중 선택하도록 한다-->
+                                <option value='10'>10시</option>
+                                <option value='11'>11시</option>
+                                <option value='12'>12시</option>
+                                <option value='13'>13시</option>
+                                <option value='14'>14시</option>
+                                <option value='15'>15시</option>
+                                <option value='16'>16시</option>
+                                <option value='17'>17시</option>
+                                <option value='18'>18시</option>
+                            </select>
+                            <p style="color:#6e6e6e;">
+                                <!--운영시간과 관람시간을 표시해 예약 시간에 도움을 준다-->
+                                평일(월-목) 10시~19시 (관람가능 : 20시)<br>
+                                주말(금-일), 공휴일 10시~21시 (관람가능 : 22시)
+                            </p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <!--관람인원-->
+                        <th height="80"><label for="VisitNumber">관람인원</label></th>
+                        <td>
+                            <!--대인, 청소년, 소인, 인솔교사 인원을 각각 입력받는다 / min과 max를 통해 0에서 99명만 선택할 수 있다-->
+                            <!--값은 직접 숫자를 입력해도 되고, 박스에 마우스를 대면 보이는 화살표를 이용해 조절해도 된다-->
+                            대인 <input type="number" min="0" max="99" id="adult" name="adult" value="" placeholder="0" maxlength="3" />
+                            &nbsp&nbsp&nbsp&nbsp&nbsp
+                            청소년 <input type="number" min="0" max="99" id="highteen" name="highteen" value="" placeholder="0" maxlength="3" />
+                            <p></p>
+                            소인 <input type="number" min="0" max="99" id="child" name="child" value="" placeholder="0" maxlength="3" />
+                            &nbsp&nbsp&nbsp&nbsp&nbsp
+                            인솔교사 <input type="number" min="0" max="99" id="teacher" name="teacher" value="" placeholder="0" maxlength="3" />
+
+                            <p style="color:#6e6e6e;">
+                                숫자만 입력하시오 (단, 없을 경우 0으로 입력하시오)
+                            </p>
+                        </td>
+
+
+                    </tr>
+
+
+                    <tr>
+                        <!--추가사항-->
+                        <th height="30" width="10"><label for"more">추가사항</label></th><!--추가로 궁금한 사항이 있으면 메모를 남긴다-->
+                        <td>
+                            <textarea id="more" name="more" rows="20" cols="70"></textarea>
+                        </td>
+                    </tr>
+
+                </table>
+                <br>
+                <button type="button" onclick="reservation();" id="reservate">
+                    <!--예약버튼으로 누르면 reservation함수를 호출한다-->
+                    예약하기
+                </button>
+            </form>
+
+        </main>
+        <aside class="Right_side"></aside>
+
+    </div>
+
+    <hr style="border: solid 1px gray;">
+    <footer>
+        <div class="foo_div1">
+            <span>(주)AQUA-KOREA</span> <span>  |  </span>
+            <span>공동대표 : 안치원,장유성,정진희</span> <span>  |  </span>
+            <span>전화번호 : 010-2665-5307</span> <span>  |  </span>
+            <p>주소 : 서울특별시 광진구 능동로 209 (군자동), 세종대학교</p>
+            <p>AQUA-KOREA</p>
+            <img src="http://www.newscj.com/news/photo/201610/380601_341606_5826.jpg">
+            <img src="https://lh5.ggpht.com/yVfPv-yLjIuBjpKj41NLkLXmuVv8XzH0m2hf-_sz9lQDv9WB9SX0McB8Jn4bQe4w5Q=w300">
+            <img src="https://media.rocketpunch.com/cache/2e/d5/2ed5970e32545f0b1d74beac75914e7b.jpg">
+          </div>
+    </footer>
+
+    <script type="text/javascript" src="Group/Group.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+/* scroll-behavior 속성을 이용해서 스크롤을 부드럽게 했다 */
+
+ body, html{
+   margin : 0;
+   padding: 0;
+ }
+ /* margin과 padding 속성을 이용해서 메인페이지 동영상에 공백이 없도록 하였다. */
+
+  #videobcg {
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       min-width: 100%;
+       min-height: 100%;
+       width: 1530px;
+       height: auto;
+       z-index: -1000;
+       overflow: hidden;
+  }
+  /* 비디오의 포지션과 z-index를 통해 비디오가 맨 뒤에 깔리도록 했다.
+  min-width와 min-height를 100퍼로 설정하여 비디오가 화면에 꽉차도록 했다.
+  만약 컨텐츠가 꽉차면 숨기도록 했다. */
+
+
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .TopBar{
+    width : 100%;
+    margin : 0 auto;
+    top : 0;
+    left:0;
+  }
+
+ /* 아래의 코드는 전체적용css와 동일하다. */
+  .TopBar-fixed{
+    position: fixed;
+    background-color: #BDBDBD;
+    opacity: 0.8;
+    margin : 0 auto;
+    top : 0;
+    left : 0;
+  }
+
+ /* 아래의 코드는 전체적용css와 동일하다. */
+  .Logo, .betweenHidden, .MainMenu{
+    display: inline-block;
+    vertical-align: top;
+    height: 100px;
+    margin : 0 auto;
+    text-align: center;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .Logo{
+    width : 18%;
+    font-family: 'Comic Sans MS','Segoe Script', 'Lemonada', cursive;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .Logo > h1 > a{
+    text-decoration: none;
+    color:white;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .Logo > h1 > a:hover{
+    color: #58ACFA;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .betweenHidden{
+    width : 16%;
+    visibility: hidden;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .MainMenu{
+    width : 65%;
+    font-size: 18px;
+    font-weight:bold;
+    font-family:"나눔스퀘어라운드","NanumGothic" ,"Batang", serif;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .MainMenu > ul{
+    margin-top: 0;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .MainMenu > ul > li{
+    float: left;
+    width: 20%;
+    height: 100%;
+    line-height: 100px;
+    list-style: none;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .MainMenu > ul > li > a{
+    display: block;
+    color: white;
+    text-decoration:  none;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .MainMenu > ul:hover > li > a {
+    background-color: white;
+    border-bottom: 1px solid gray;
+    color : #585858;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .SubMenu{
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 1px;
+    width: 100%;
+    display: none;
+    background-color: white;
+    z-index: 1000;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .SubMenu > li > a{
+    display: block;
+    color: #585858;
+    text-decoration:  none;
+  }
+  .SubMenu > li > a:hover{
+    /*background-color: #CEE3F6;*/
+    color : #0431B4;
+  }
+
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .Frame{
+    width : 1530px;
+    height: 1000px;
+    margin  : auto;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .Left_side,.Right_side,.Content{
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .Left_side,.Right_side{
+    width : 18%;
+  }
+  /* 아래의 코드는 전체적용css와 동일하다. */
+  .Content{
+    width : 63%;
+    text-align: center;
+    background-color: white;
+  }
+
+  /* footer의 크기 설정. 하단정렬을 위해서 position설정 */
+  footer {
+      width : auto;
+      position:relative;
+      height:200px;
+  }
+
+  /* 왼쪽여백을 적당히, 아래 여백을 0, 설정하여 중앙 하단정렬 완성 */
+  .foo_div1 {
+      text-align: center;
+      position:absolute;
+      bottom:0px;
+      left : 35%;
+      margin: 0 auto;
+  }
+/* 아래의 코드는 전체적용css와 동일하다. */
+  .foo_div1 span {
+      font-size: 15px;
+      color: black;
+  }
+/* 아래의 코드는 전체적용css와 동일하다. */
+  .foo_div1 p {
+      margin-top: 5px;
+      color: black;
+  }
+/* 아래의 코드는 전체적용css와 동일하다. */
+  .foo_div1 img {
+      width: 25px;
+      height: 25px;
+      margin-top: 10px;
+  }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>메인페이지 제외 전체에 적용되는 레이아웃 설명</title>
+    <link rel="stylesheet" type="text/css" href="전체적용스타일.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript" src="전체적용.js"></script>
+
+    <!-- 전체에 적용되는 css파일과 js파일을 적용시킨다. -->
+  </head>
+
+  <body>
+
+    <header>
+      <!-- header태그는 이미지를 삽입하기위해 만들었다. -->
+    <div class="TopBar">
+      <!-- TopBar는 자식 div로 Logo,betweenHidden,MainMenu 등을 갖고 있으며 페이지 상단의 바로 표시된다 -->
+      <div class="Logo">
+        <h1><a href="Mainpage.html">AQUA-KOREA</a></h1>
+        <!-- 로고는 메인페이지로 이동하는 링크가 걸려있다. -->
+      </div>
+      <div class="betweenHidden">
+      </div>
+      <!--  betweenHidden은 로고와 메인메뉴 사이를 메꾸기 위해 삽입한 div이다. -->
+      <nav class="MainMenu">
+        <!-- 메인메뉴를 nav태그로 구현했다.
+          5개의 분류로 나누어지고 각각의 메인메뉴는 서브메뉴의 첫번째로 이동하는 링크가 걸려있다.
+          ul li태그로 구현하였다. -->
+        <ul>
+          <li><a href="AKIntro.html">AQUA-KOREA</a>
+            <ul class ="SubMenu">
+              <!-- 서브메뉴는 SubMenu 클래스로 설정하여 따로 작업할 수 있도록 하였다. -->
+              <li><a href="AKIntro.html">AQUA-KOREA 소개</a></li>
+              <li><a href="ExhibitionHall.html">전시관 안내</a></li>
+              <li><a href="Time.html">운영시간</a></li>
+              <li><a href="HowToCome.html">오시는 길</a></li>
+            </ul>
+          </li>
+          <li><a href="Program.html">프로그램/이벤트</a>
+            <ul class = "SubMenu">
+              <!-- 서브메뉴는 SubMenu 클래스로 설정하여 따로 작업할 수 있도록 하였다. -->
+              <li><a href="Program.html">프로그램</a></li>
+              <li><a href="Event.html">이벤트</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <!-- 서브메뉴의 드롭다운이 아름답게 내려올 수 있도록 띄워쓰기를 li태그에 넣어 4개의 li를 채웠다 -->
+            </ul>
+          </li>
+          <li><a href="E-Ticket.html">온라인 예매</a>
+            <ul class = "SubMenu">
+              <!-- 서브메뉴는 SubMenu 클래스로 설정하여 따로 작업할 수 있도록 하였다. -->
+              <li><a href="E-Ticket.html">온라인 예매</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="Group.html">단체</a>
+            <ul class = "SubMenu">
+              <!-- 서브메뉴는 SubMenu 클래스로 설정하여 따로 작업할 수 있도록 하였다. -->
+              <li><a href="Group.html">단체 예약</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+          <li><a href="QNA.html">고객의 소리</a>
+            <ul class = "SubMenu">
+              <!-- 서브메뉴는 SubMenu 클래스로 설정하여 따로 작업할 수 있도록 하였다. -->
+              <li><a href="QNA.html">QnA</a></li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+              <li>&nbsp</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+    <div class="Frame">
+      <!-- Frame은 Left_side, Right_side, Content 를 감싸고 있는 div이다.-->
+      <aside class="Left_side"></aside>
+      <!-- 왼쪽 공백을 위해 Left_side를 설정하였다 -->
+      <main class="Content">
+        <!-- 컨텐츠가 들어가는 공간이다. main태그로 구현하였다. -->
+      </main>
+      <aside class="Right_side"></aside>
+      <!-- 오른쪽 공백을 위해 Left_side를 설정하였다 -->
+    </div>
+
+    <hr style="border: solid 1px gray;">
+    <!-- footer와 Frame의 경계선 역할로 hr을 하나 삽입하였다 -->
+    <footer>
+        <div class="foo_div1">
+          <!-- footer 정보들이 들어갈 div를 만들고 span 태그를 통해 정돈되게 구성하였다. -->
+            <span>(주)AQUA-KOREA</span> <span>  |  </span>
+            <span>공동대표 : 안치원,장유성,정진희</span> <span>  |  </span>
+            <span>전화번호 : 010-2665-5307</span> <span>  |  </span>
+            <p>주소 : 서울특별시 광진구 능동로 209 (군자동), 세종대학교</p>
+            <p>AQUA-KOREA</p>
+            <img src="http://www.newscj.com/news/photo/201610/380601_341606_5826.jpg">
+            <img src="https://lh5.ggpht.com/yVfPv-yLjIuBjpKj41NLkLXmuVv8XzH0m2hf-_sz9lQDv9WB9SX0McB8Jn4bQe4w5Q=w300">
+            <img src="https://media.rocketpunch.com/cache/2e/d5/2ed5970e32545f0b1d74beac75914e7b.jpg">
+            <!-- 이미지는 인터넷에서 각각 불러왔다. -->
+          </div>
+    </footer>
+  </body>
+
+</html>
